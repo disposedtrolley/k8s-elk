@@ -14,6 +14,12 @@ Content mainly follows the [Digital Ocean tutorial](https://www.digitalocean.com
    1. `kubectl create -f elasticsearch-statefulset.yml`
 4. Create the Kibana service and deployment
    1. `kubectl create -f kibana.yml`
+5. Roll out fluentd to all pods running on the cluster
+   1. `kubectl create -f fluentd.yml`
+
+For convenience, use the `Makefile`:
+
+* `make deploy` - executes the steps above.
 
 Wait a few minutes, and then...
 
